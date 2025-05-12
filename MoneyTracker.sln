@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerLibrary", "MoneyTrackerLibrary\MoneyTrackerLibrary.csproj", "{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerApp", "MoneyTrackerApp\MoneyTrackerApp.csproj", "{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D9F61F9-DD0A-4EA7-B6AC-644B2C1CE4BC}
+	EndGlobalSection
+EndGlobal
