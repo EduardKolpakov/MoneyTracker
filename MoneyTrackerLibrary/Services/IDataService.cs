@@ -1,9 +1,6 @@
-﻿using System;
+﻿using MoneyTrackerLibrary.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using MoneyTrackerLibrary.Model;
 
 namespace MoneyTrackerLibrary.Services
 {

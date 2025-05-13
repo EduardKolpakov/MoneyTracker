@@ -1,5 +1,8 @@
-﻿using MoneyTrackerApp.ViewModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,42 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MoneyTrackerApp;
-
-public partial class MainWindow : Window
+namespace MoneyTrackerApp
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-    }
-
-    private void AddButton_Click(object sender, RoutedEventArgs e)
-    {
-        var viewModel = DataContext as MainViewModel;
-        viewModel?.AddTransaction();
-    }
-
-    private void TextBox_GotFocus(object sender, RoutedEventArgs e)
-    {
-        var textBox = sender as TextBox;
-        if (textBox.Text == "Описание" || textBox.Text == "Сумма")
+        public MainWindow()
         {
-            textBox.Text = "";
-            textBox.Foreground = Brushes.Black;
+            InitializeComponent();
         }
-    }
 
-    private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-    {
-        var textBox = sender as TextBox;
-        if (string.IsNullOrWhiteSpace(textBox.Text))
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Name == "DescriptionTextBox")
-                textBox.Text = "Описание";
-            else
-                textBox.Text = "Сумма";
-
-            textBox.Foreground = Brushes.Gray;
+            var viewModel = DataContext as ViewModels.MainViewModel;
+            viewModel?.AddTransaction();
         }
     }
 }

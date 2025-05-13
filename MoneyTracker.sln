@@ -5,7 +5,9 @@ VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerLibrary", "MoneyTrackerLibrary\MoneyTrackerLibrary.csproj", "{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerApp", "MoneyTrackerApp\MoneyTrackerApp.csproj", "{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerApp", "MoneyTrackerApp\MoneyTrackerApp.csproj", "{9C310B3A-F58B-430B-BCAE-99E05C835F7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrackerTests", "MoneyTrackerTests\MoneyTrackerTests.csproj", "{9B409570-2851-4F17-BBEE-68E64BC6D6D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B6C3CF-D9C8-4AF1-A8B9-792718C9379F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D00A8CC-1413-445D-9607-0D29F4D4C5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C310B3A-F58B-430B-BCAE-99E05C835F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C310B3A-F58B-430B-BCAE-99E05C835F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C310B3A-F58B-430B-BCAE-99E05C835F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C310B3A-F58B-430B-BCAE-99E05C835F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B409570-2851-4F17-BBEE-68E64BC6D6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B409570-2851-4F17-BBEE-68E64BC6D6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B409570-2851-4F17-BBEE-68E64BC6D6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B409570-2851-4F17-BBEE-68E64BC6D6D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,10 @@
-﻿using MoneyTrackerLibrary.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using MoneyTrackerLibrary.Model;
+using System.Text.Json.Serialization;
+using System.Xml;
 
 namespace MoneyTrackerLibrary.Services
 {
@@ -14,15 +16,14 @@ namespace MoneyTrackerLibrary.Services
         {
             if (!File.Exists(_filePath)) return new List<Transaction>();
 
-            var json = await File.ReadAllTextAsync(_filePath);
-            return JsonSerializer.Deserialize<List<Transaction>>(json);
+            var json = File.ReadAllText(_filePath);
+            return JsonConvert.DeserializeObject<List<Transaction>>(json);
         }
 
         public async Task SaveAsync(List<Transaction> transactions)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            var json = JsonSerializer.Serialize(transactions, options);
-            await File.WriteAllTextAsync(_filePath, json);
+            var json = JsonConvert.SerializeObject(transactions, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(_filePath, json);
         }
     }
 }

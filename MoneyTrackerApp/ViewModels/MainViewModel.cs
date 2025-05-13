@@ -1,22 +1,20 @@
 ﻿using MoneyTrackerLibrary.Model;
 using MoneyTrackerLibrary.Services;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
-namespace MoneyTrackerApp.ViewModel
+namespace MoneyTrackerApp.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
         private readonly FinanceManager _financeManager;
-        private readonly JsonDataService _dataService = new();
+        private readonly IDataService _dataService = new JsonDataService();
 
-        public ObservableCollection<Transaction> Transactions { get; set; } = new();
+        public ObservableCollection<Transaction> Transactions { get; set; } = new ObservableCollection<Transaction>();
 
         private string _description;
         private decimal _amount;
@@ -72,6 +70,12 @@ namespace MoneyTrackerApp.ViewModel
 
         public async void AddTransaction()
         {
+            if (Amount <= 0)
+            {
+                MessageBox.Show("Сумма должна быть больше нуля.");
+                return;
+            }
+
             var transaction = new Transaction
             {
                 Id = Transactions.Count + 1,

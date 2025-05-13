@@ -1,5 +1,4 @@
 ﻿using MoneyTrackerLibrary.Model;
-using MoneyTrackerLibrary.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +8,7 @@ namespace MoneyTrackerLibrary.Services
     public class FinanceManager
     {
         private readonly IDataService _dataService;
-        private List<Transaction> _transactions = new();
+        private List<Transaction> _transactions = new List<Transaction>();
 
         public FinanceManager(IDataService dataService)
         {
@@ -31,9 +30,14 @@ namespace MoneyTrackerLibrary.Services
             _transactions.Add(transaction);
         }
 
-        public decimal GetBalance() =>
-            _transactions.Sum(t => t.Type == TransactionType.Income ? t.Amount : -t.Amount);
+        public decimal GetBalance()
+        {
+            return _transactions.Sum(t => t.Type == TransactionType.Income ? t.Amount : -t.Amount);
+        }
 
-        public List<Transaction> GetAllTransactions() => _transactions.ToList();
+        public List<Transaction> GetAllTransactions()
+        {
+            return _transactions.ToList();
+        }
     }
 }
