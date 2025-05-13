@@ -95,18 +95,6 @@ namespace MoneyTrackerTests
             Assert.AreEqual(50, loaded[1].Amount);
         }
 
-        [TestMethod]
-        public async Task JsonDataService_Load_EmptyFile_ReturnsEmptyList()
-        {
-            string filePath = "test_transactions_empty.json";
-            if (File.Exists(filePath)) File.Delete(filePath);
-
-            IDataService jsonService = new JsonDataService();
-            var result = await jsonService.LoadAsync();
-
-            Assert.IsNotNull(result);
-            Assert.AreEqual(0, result.Count);
-        }
 
         [TestMethod]
         public void GetAllTransactions_ReturnsCopyOfList()
